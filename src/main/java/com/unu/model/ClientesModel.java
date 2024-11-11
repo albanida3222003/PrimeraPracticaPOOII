@@ -42,7 +42,7 @@ public class ClientesModel extends Conexion{
 		}
 		return clientes;
 	}
-
+	
 	public int insertarCliente(Cliente cliente) {
 		int filasAfectadas = 0;
 		try {

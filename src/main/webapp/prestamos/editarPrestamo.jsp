@@ -9,7 +9,7 @@
 <title>Editar prestamo</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body data-bs-theme="dark">
 
 <% String url = "http://localhost:8081/PrimeraPracticaPOOII/"; %>
 <% 
@@ -24,6 +24,7 @@
 <% int idcliente = prestamo.getIdcliente(); %>
 
 <div class="container">
+	<%@ include file ="/cabezara.jsp"%>
 	<br>
 	<h3> Editar prestamo </h3>
 	<div class="form-group">
@@ -36,8 +37,8 @@
 		<input type="number" name="interes" value="<%=prestamo.getInteres()%>" class="form-control"> <p></p>
 		<input type="number" name="nroCuotas" value="<%=prestamo.getNroCuotas()%>" class="form-control"> <p></p>
 		<br>
-		<input type="submit" value="Guardar" class="btn btn-primary">
-		<a href="<%=url%>PrestamosController?operacion=listar&idcliente=<%=idcliente%>" class="btn btn-outline-primary"> Volver </a>
+		<input type="submit" value="Guardar" class="btn btn-success">
+		<a href="<%=url%>PrestamosController?operacion=listar&idcliente=<%=idcliente%>" class="btn btn-success"> Volver </a>
 	</form>
 	</div>
 </div>

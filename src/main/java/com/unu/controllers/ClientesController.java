@@ -7,7 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import com.unu.beans.Cliente;
 import com.unu.model.ClientesModel;
@@ -153,5 +155,24 @@ public class ClientesController extends HttpServlet {
 		}
 	}
 	
-
+	private boolean validar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		boolean res = false;
+		List<String> lisrError = new ArrayList<String>();
+		try {
+			if (request.getParameter("nombres").equals("")) {
+				res = true;
+				lisrError.add("Ingrese los nombres del cliente");
+			}	
+			if (request.getParameter("apellidos").equals("")) {
+				res = true;
+				lisrError.add("Ingrese los apellidos del cliente");
+			}	
+			request.setAttribute("respuesta", res);
+			request.setAttribute("error", lisrError);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.getStackTrace();
+		}
+		return res;
+	}
 }
