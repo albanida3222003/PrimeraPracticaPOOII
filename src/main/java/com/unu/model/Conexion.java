@@ -8,7 +8,7 @@ public class Conexion {
 
 	private String url = "jdbc:mysql://localhost:3306/primerapracticapooii";
 	private String usuario = "root";
-	private String contrasena = "root";
+	private String contrasena = "123456";
 	protected Connection conexion;
 
 	public void openConnection() {
