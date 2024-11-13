@@ -47,7 +47,7 @@
 </head>
 <body data-bs-theme="dark">
 
-	<%@ include file ="/cabezara.jsp"%>
+	<%@ include file ="/cabecera.jsp"%>
 	<%
 	String url = "http://localhost:8081/PrimeraPracticaPOOII/";
 	%>

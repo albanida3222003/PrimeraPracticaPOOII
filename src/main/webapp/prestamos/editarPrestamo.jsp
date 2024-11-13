@@ -24,7 +24,7 @@
 <% int idcliente = prestamo.getIdcliente(); %>
 
 <div class="container">
-	<%@ include file ="/cabezara.jsp"%>
+	<%@ include file ="/cabecera.jsp"%>
 	<br>
 	<h3> Editar prestamo </h3>
 	<div class="form-group">

@@ -24,7 +24,7 @@
 <% String datosCliente = cliente.getNombres() + " " + cliente.getApellidos() ; %>
 
 <div class="container">
-	<%@ include file ="/cabezara.jsp"%>
+	<%@ include file ="/cabecera.jsp"%>
 	<br>
 	<h3> Nuevo préstamo </h3>
 	<p class="fs-4"> Cliente: <%= datosCliente %> </p>

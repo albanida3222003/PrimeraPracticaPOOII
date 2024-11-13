@@ -21,7 +21,6 @@
 	crossorigin="anonymous">
 </head>
 <body data-bs-theme="dark">
-	<%@ include file ="/cabezara.jsp"%>
-	INDEX
+	<%@ include file ="/cabecera.jsp"%>
 </body>
 </html>
